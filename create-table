@@ -1,0 +1,17 @@
+
+========== PRIMARY KEY ===========
+
+CREATE TABLE city(
+cid INT AUTO_INCREMENT NOT NULL,
+cityName VARCHAR(50) NOT NULL,
+PRIMARY KEY (cid)
+);
+
+
+CREATE TABLE country (
+countryID INT NOT NULL AUTO_INCREMENT,
+countryName VARCHAR(50) NOT NULL,
+cityID INT NOT NULL,
+PRIMARY KEY (countryID),
+FOREIGN KEY (cityID) REFERENCES  city(cid)
+);
